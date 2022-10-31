@@ -1,0 +1,303 @@
+/*common*/
+.wrap {
+	width: 100%;
+}
+
+.top_wrap {
+	/* height:127px; */
+	background: #333c50;
+}
+
+.top {
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 40px 0 50px;
+}
+
+.top:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.top h1 {
+	float: left;
+}
+
+.top span {
+	display: block;
+	float: right;
+	text-align: right;
+	color: #fff;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.content_wrap {
+	max-width: 1100px;
+	margin: 50px auto 40px;
+	padding: 0 15px;
+}
+
+.content_wrap:after,
+.content .set .list:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.content_wrap .infowrap {
+	float: left;
+	width: 300px;
+}
+
+.content_wrap .infowrap .title img {
+	display: block;
+}
+
+.content_wrap .infowrap .title em {
+	display: inline-block;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: #5c5abd;
+	margin: 10px 0 20px;
+}
+
+.content_wrap .infowrap .infomation {
+	margin-top: 50px;
+	color: red;
+	line-height: 20px;
+	font-size: 12.5px;
+	font-weight: bold;
+}
+
+.content_wrap .infowrap .info p,
+.content_wrap .infowrap .title p {
+	color: #777;
+	font-size: 13px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.content_wrap .infowrap .title .message {
+	margin: 50px 0;
+	font-size: 13px;
+	line-height: 22px;
+	padding: 10px;
+	border: 1px solid #dbdbdb;
+}
+
+.content_wrap .infowrap .title .message strong {
+	background: #e4f1c9;
+	padding: 2px 5px;
+}
+
+.content_wrap .infowrap .info {
+	margin-top: 30px;
+}
+
+.content_wrap .infowrap .info img {
+	width: 380px;
+}
+
+.content_wrap .infowrap .info dl {
+	margin-top: 15px;
+	width: 80%;
+	border: 1px solid #dbdbdb;
+	padding: 15px 15px 10px 15px;
+}
+
+.content_wrap .infowrap .info dt {
+	margin-bottom: 5px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.content_wrap .infowrap .info dd {
+	line-height: 24px;
+}
+
+.content {
+	float: right;
+	width: 680px;
+}
+
+.content .set {
+	margin-top: 50px;
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.content .set:first-child {
+	margin-top: 10px;
+}
+
+.content .set>p {
+	width: 680px;
+	height: 50px;
+	text-align: center;
+	background: url(../images/title_balloon.png) center center no-repeat;
+	color: #fff;
+	font-weight: 700;
+	font-size: 13px;
+	padding-top: 10px;
+	margin: 20px 0 10px;
+}
+
+.content .set>span {
+	display: block;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 10px 0 0;
+}
+
+.content .set .list li {
+	float: left;
+	/* display:table; */
+	width: 330px;
+	overflow: hidden;
+	margin: 5px 10px 10px;
+}
+
+.content .set .list li:nth-child(odd) {
+	margin-left: 0;
+	clear: both;
+}
+
+.content .set .list li:nth-child(even) {
+	margin-right: 0;
+}
+
+/* .content .set .list li:last-child { clear:both; width:100%; } */
+.content .set .list li a {
+	display: block;
+	height: 220px;
+}
+
+.content .set .list li p {
+	font-size: 16px;
+	font-weight: bold;
+	color: #2a3243;
+	border-bottom: 1px solid #333;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.content .set .list li p span {
+	color: #777;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+/* .content .set .list li:nth-child(odd) {
+	margin-right:20px;
+} */
+.content .set p.text {
+	color: #4c4c4c;
+	margin-top: 15px;
+	line-height: 22px;
+}
+
+.content .set p.text span {
+	color: #a2a2a2;
+}
+
+li:hover {
+	border: 2px solid #3a3a3a;
+}
+
+
+/* sub */
+.sub_wrap {
+	width: 100%;
+	margin: auto;
+}
+
+.sub_wrap p {
+	padding: 15px 0 30px;
+	font-weight: 700;
+	width: 1200px;
+	margin: 0 auto;
+	color: red;
+	font-size: 18px;
+	text-align: center;
+}
+
+.sub_wrap .btn {
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	/* top: 5%; right: 15%; */
+	z-index: 50;
+}
+
+.sub_wrap .btn a {
+	margin-top: 10px;
+}
+
+.sub_wrap .btn a.home {
+	background: rgb(0 0 0 / 0.75);
+	color: #fff;
+	border: 2px solid #fdfdfd;
+	display: block;
+	width: 150px;
+	padding: 12px 15px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 13px;
+}
+
+.sian_img img {
+	width:100%;
+	position: relative;
+}
+
+.image-map {
+	position: absolute;
+	display: block;
+	font-size: 14px;
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	word-break: keep-all;
+}
+
+/* image map ǥ�� */
+/*
+.sian_img a,
+area:link,
+area:hover,
+area:active,
+area:focus {
+	border: 1px solid red;
+}
+*/
+
+/* v.sian_imgA-1 { background:url(../images/mainA-1.jpg) top center no-repeat;
+	height:8268px;
+} */
+/* 	.sian_imgB-1 { background:url(../images/mainB-1.jpg) top center no-repeat;
+	height:8848px;
+	} */
+/* .sian_landing { background:url(../images/main_landing.jpg) top center no-repeat;
+	height:6489px;
+} */
+/* .sian_img3-2 { background:url(../images/sub2.jpg) top center no-repeat;
+	height:800px;
+}
+.sian_img3-3 { background:url(../images/sub3.jpg) top center no-repeat;
+	height:1200px;
+} */
+.sian_imgM {
+	width: 100%;
+	background-size: 100% auto !important;
+	text-align: center;
+}
+
+.sian_imgM img {
+	width: 450px;
+}
