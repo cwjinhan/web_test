@@ -1,9 +1,9 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 //const productName = urlParams.get("product-id");
-const productId = urlParams.get("product-id");
+const productName = urlParams.get("product-name");
 
-const product = getProductById(productId);
+const product = getProductByName(productName);
 console.log('find product', product);
 
 const {
