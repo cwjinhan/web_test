@@ -1,11 +1,11 @@
 //function getProductById(cw) {
-function getProductByName(cw) {
+/*function getProductByName(cw) {
 		const dbData = [
 		{
 			id: '1',
 			name: 'iPhone',
 			descript: 'iPhone is...'
-/*			images: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-1-202209?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1660753619946"*/
+		images: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-1-202209?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1660753619946"
 		},
 		{
 			id: '2',
@@ -38,7 +38,7 @@ function getProductByName(cw) {
 		return dbData;
 	}
 }
-
+*/
 function getProductByName(cw) {
 		const dbData = [
 		{
