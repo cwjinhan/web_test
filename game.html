@@ -51,13 +51,10 @@
 		const guesses = document.querySelector('.guesses');
 		const lastResult = document.querySelector('.lastResult');
 		const lowOrHi = document.querySelector('.lowOrHi');
-
 		const guessSubmit = document.querySelector('.guessSubmit');
 		const guessField = document.querySelector('.guessField');
-
-		let guessConunt = 1;
+		let guessCount = 1;
 		let resetButton;
-		guessField.focus();
 
       // Your JavaScript goes here
 
@@ -66,6 +63,7 @@
 			if (guessCount === 1) {
 				guesses.textContent = 'Previous guesses: ';
 			}
+
 			guesses.textContent += userGuess + ' ';
 
 			if (userGuess === randomNumber) {
@@ -78,9 +76,9 @@
 				lowOrHi.textContent = '';
 				setGameOver();
 			} else {
-				lastResult.textContent = 'Wrong!';
+				lastResult.textContent = '틀렸어!';
 				lastResult.style.backgroundColor = 'red';
-				if(userGuess < randomBumber) {
+				if(userGuess < randomNumber) {
 					lowOrHi.textContent = 'Last guess was too low!';
 				} else if(userGuess > randomNumber) {
 					lowOrHi.textContent = 'Last guess was too high!';
@@ -91,6 +89,7 @@
 			guessField.value = '';
 			guessField.focus();
 		}
+
 		guessSubmit.addEventListener('click', checkGuess);
 
 		function setGameOver() {
@@ -104,13 +103,12 @@
 
 		function resetGame() {
 			guessCount = 1;
-
 			const resetParas = document.querySelectorAll('.resultParas p');
 			for (const resetPara of resetParas) {
-				restPara.textContent = '';
+				resetPara.textContent = '';
 			}
 
-			resetButton.parentNode.removeChilld(restButton);
+			resetButton.parentNode.removeChild(resetButton);
 
 			guessField.disabled = false;
 			guessSubmit.disabled = false;
@@ -119,7 +117,7 @@
 
 			lastResult.style.backgroundColor = 'white';
 
-			randomNumber = Math.floor(math.random() * 100) + 1;
+			randomNumber = Math.floor(Math.random() * 100) + 1;
 		}
 
 
