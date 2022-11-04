@@ -10,20 +10,59 @@
 		</script>
 	</head>
 	<body>
+	<!--	<div class="line_family">
+			<div id="1" class="line_a spec fstep"></div>
+			<div id="2" class="line_a spec fstep"></div>
+			<div id="3" class="line_a spec sstep"></div>
+			<div id="4" class="line_a spec sstep"></div>
+			<div id="5" class="line_a spec tstep"></div>
+			<div id="6" class="line_a spec tstep"></div>
+			<div id="7" class="line_a spec tstep"></div>
+			<div id="8" class="line_b spec"></div>
+			<div id="9" class="line_c spec"></div>
+			<div id="10" class="line_c spec"></div>
+			<div id="11" class="line_d spec"></div>
+			<div id="12" class="line_e spec"></div>
+		</div>-->
 		<div class="line_family">
-			<div class="line_a spec fstep"></div>
-			<div class="line_a spec fstep"></div>
-			<div class="line_a spec sstep"></div>
-			<div class="line_a spec sstep"></div>
-			<div class="line_a spec tstep"></div>
-			<div class="line_a spec tstep"></div>
-			<div class="line_a spec tstep"></div>
-			<div class="line_b spec"></div>
-			<div class="line_c spec"></div>
-			<div class="line_c spec"></div>
-			<div class="line_d spec"></div>
-			<div class="line_e spec"></div>
+			<div id="1" class="spec fstep"></div>
+			<div id="2" class="spec fstep"></div>
+			<div id="3" class="spec sstep"></div>
+			<div id="4" class="spec sstep"></div>
+			<div id="5" class="spec tstep"></div>
+			<div id="6" class="spec tstep"></div>
+			<div id="7" class="spec tstep"></div>
+			<div id="8" class="spec"></div>
+			<div id="9" class="spec"></div>
+			<div id="10" class="spec"></div>
+			<div id="11" class="spec"></div>
+			<div id="12" class="spec"></div>
 		</div>
+		<script>
+			console.log(document.getElementsByClassName("spec"));
+			const specArr = document.getElementsByClassName("spec");
+
+			let 기준 = 0.3;
+
+			function render() {
+			for (let index = 0; index < specArr.length; index++) {
+				const element = specArr[index];
+				const px = 기준 * (index + 1);
+				element.style = `border-bottom: ${px.toFixed(1)}px solid #333;`;
+				}
+			}
+			setInterval(function() {
+				if(기준 < 3) {
+					기준 += 0.3;
+				} else if(기준 == 10){
+					기준 = 0;
+				} else {
+					기준 = 10;
+				}
+				render();
+				console.log(기준);
+			}, 500);
+		</script>
 	</body>
 
 
