@@ -1,17 +1,34 @@
-.spec {margin-bottom:10px;}
+.spec {margin-bottom:2px;}
 
 .line_a {
-	border: 0.3px solid #333;
+	border-bottom: 0.3px solid #333;
 }
 .line_b {
-	border: 0.6px solid #333;
+	border-bottom: 1px solid #333;
 }
 .line_c {
-	border: 0.9px solid #333;
+	border-bottom: 2px solid #333;
 }
+
 .line_d {
-	border: 1.2px solid #333;
+	border-bottom: 5px solid #333;
 }
 .line_e {
-	border: 1.5px solid #333;
+	border-bottom: 8.5px solid #333;
+}
+
+.zstep {
+	border-color: #333;
+}
+
+.fstep {
+	border-color: #e7e7e7;
+}
+
+.sstep {
+	border-color: #b9b9b9;
+}
+
+.tstep {
+	border-color: #898989;
 }
