@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			console.log('1. 변수 x가 10보다 크고 20보다 작을 때 변수 X를 출력하는 조건식을 완성')
+			const a = 10;
+			const b = 20;
+
+			for (let x = 1; x < b; x++) {
+				if (x > 10 && x < 20) {
+					console.log(x);
+				}
+			}
+
+			console.log('2. for문을 사용하여 0부터 10미만의 정수 중에서 짝수만을 작은 수 부터 출력')
+
+			for(let num = 1; num <= 10; num++) {
+				if (num%2 === 0)
+				console.log(num);
+			}
+
+			console.log('3. for문을 사용하여 0부터 10미만의 정수 중에서 짝수만을 작은 수부터 문자열로 출력')
+			let num_print = "";
+			for(let num_ = 1; num_ <= 10; num_++) {
+				if (num_%2 === 0)
+				num_print += num_ + '\t';
+			}
+			console.log(num_print);
+
+			console.log('4. for문을 사용하여 0부터 10미만의 정수 중에서 홀수만을 큰수부터 문자열로 출력')
+			let num
+			for(let num = 10; num >= 1; num--) {
+				if (num%2 === 1) // Remainder(%) 나머지 값
+				console.log(num);
+			}
+			console.log('5. while문을 사용하여 0 부터 10 미만의 정수 중에서 짝수만을 작은 수부터 출력')
+
+			let x = 0;
+			while (x < 10) {
+				x++;
+				if (x%2 === 0)
+				console.log(x);
+			}
+
+			console.log('6. while문을 사용하여 0 부터 10 미만의 정수 중에서 홀수만을 큰수부터 출력')
+
+			let y = 10;
+			let print_y = "";
+
+			while (y >= 1) {
+				y--;
+				if (y%2 === 1)
+				console.log(y);
+			}
+
+			console.log('7. for 문을 사용하여 0부터 10미만의 정수의 합을 출력')
+			let sum = 0;
+
+			for(let i = 1; i <10; i++) {
+				sum = sum + i;
+			}
+			console.log(sum);
+
+			console.log('8. 1부터 20 미만의 정수 중에서 2 또는 3의 배수가 아닌 수의 총합을 구할것')
+
+			let ssum = 0;
+			let printt = "";
+
+			for (let s = 1; s < 20; s++) {
+				if (s % 2 != 0 && s % 3 != 0) {
+					ssum = ssum + s;
+				}
+			}
+			console.log(ssum);
+
+
+			console.log('9. 1부터 20 미만의 정수 중에서 2 또는 3의 배수인 수의 총합을 구할것')
+
+			let summ = 0;
+			let _print = "";
+
+			for (let d = 1; d < 20; d++) {
+				if (d % 2 !== 0 || d % 3 !== 0) {
+					summ = summ + d;
+				}
+			/*	if(d % 2 === 0) {
+				summ += d;
+				}
+				if(num % 3 === 0) {
+				summ += d;
+				}*/
+			}
+			console.log(summ);
+
+
+
+			console.log('10. 두 개의 주사위를 던졌을 때, 눈의 합이 6이 되는 모든 경우의 수를 출력')
+
+			let j = 0;
+			let k = 0;
+				for (let u = 0; u <= 6; u++) {
+					for (let j = 1; j <= 6; j++)
+						if ((u + j) == 6) {
+							console.log(u + "+" + j + "=" + (
+								u + j
+							));
+						}
+					}
+
+
+
+	/*		for (let num = 1; num <= 10; num++) {
+				// const numString = num + ''; console.log('typeof numString', typeof
+				// numString);
+				console.log('typeof num', typeof num);
+				if (num % 2 === 0)
+					console.log(num);
+				}
+					*/
+
+		</script>
+	</body>
+</html>

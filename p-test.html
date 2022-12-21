@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charest="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+/*		let string
+		for (let i=0; i<5; i++) {
+			string ="";
+
+			for (let j=4; j>i; j--){
+				string += ' ';
+			}
+			for (let j=0; j<=i; j++) {
+				string += '*';
+			}
+			for (let j=1; j<=i; j++){
+				string += '*';
+			}
+			console.log(string);
+
+		}
+*/
+/*
+		let a=2;
+		let b=5;
+		for ( i=1; i<6; i++) {
+			console.log(' '.repeat(a-(b%i)) + '*' .repeat((b%i)*a+1));
+		}
+*/
+
+		var length = 9;
+		let splitHalf = Math.floor(length/2);
+
+		for(let i=0; i<length; i++) {
+
+			let v = Math.abs(splitHalf - i);
+
+			let v2 = splitHalf - v;
+
+			console.log(' '.repeat(v) + '*'.repeat(v2 * 2 + 1));
+
+		}
+
+console.log('1. 변수 x가 10보다 크고 20보다 작은 수');
+console.log()
+
+</script>
+
+<!--	<p id="demo"></p>
+	<script>
+		var num=1;
+		var table="";
+		table+="<table border='1'>";
+			for(var i=0; i<5; i++)
+			{
+				table+="<tr>";
+					for(var j=0; j<5; j++)
+					{
+						table+="<td>"+ num++ +"</td>";
+					}
+				table+="</tr>";
+			}
+			table+="</table>";
+			document.getElementById('demo').innerHTML=table;
+	</script>-->
+<!--	<script>
+		let string;
+		for(let i=0; i<5; i++){
+			string = "";
+
+			for(let j=4; j>=i; j--){
+//				string = string+"*";
+				string += '*';
+			}
+
+			console.log(string);
+		}
+	</script>-->
+	<!--<script>
+		/*let string
+		for (let i = 0; i < 5; i++) {
+			// i는 0부터 1씩 더해 4까지
+			string ="";
+			// string은 값이 없다
+			for (let j = 4; j > i; j--) {
+			// j는 4, j는 i보다 작다 4부터 1까지
+				string += ' ';
+			}
+			for (let j = 0; j <= i; j++) {
+			// j는 0 , j는 i보다 작거나 같다, j에 1씩 더한다
+				string += '*';
+			}
+			for (let j = 1; j <= i; j++) {
+			// j는 1, j는 i보다 작거나 같다, j에 1씩 더한다.
+				string += '*';
+			}
+			console.log(string);
+		}
+		let string2
+		for (let i = 0; i < 4; i++) {
+			string2 ="";
+
+			for (let j = 0; j <= i; j++) {
+				string2 += ' ';
+			}
+			for (let j = 4; j > i; j--) {
+				string2 += '*';
+			}
+			for (let j = 3; j > i; j--) {
+				string2 += '*';
+			}
+			console.log(string2);
+		}*/
+
+	-->
+
+</body>
+</html>

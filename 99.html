@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			let a = 2;
+			for (a; a < 6; a++) {
+				// a= 2부터 5까지 2,3,4,5
+				let timesTable = "";
+				let dan = 2
+
+				let stDan_2 = '';
+				let stDan_3 = '';
+				let stDan_4 = '';
+				let stDan_5 = '';
+				// timesTable은 값이 없다 선언.
+				for (let b = 1; b < 10; b++) {
+					// for문 안에 for문 1부터 시작 1씩 더한다, 1부터 9까지
+			//		timesTable += (a + "*" + b + "=" + (a*b) + " ");
+					timesTable = a + "*" + b + "=" + (a*b) ;
+					// timesTable은 a * b = ab 이다.
+					//console.log(timesTable)
+
+					//console.log(dan + 'x' + b + '=' dan * b + '\t' + (dan + 1) + 'x' + b + (dan + 1) *b + '\t' + );
+
+					stDan_2 = dan + 'x' + b + '=' + dan * b;
+					stDan_3 = (dan + 1) + 'x' + b + '=' + (dan + 1) * b;
+					stDan_4 = (dan + 2) + 'x' + b + '=' + (dan + 2) * b;
+					stDan_5 = (dan + 3) + 'x' + b + '=' + (dan + 3) * b;
+
+					console.log(stDan_2 + '\t' + stDan_3 + '\t' + stDan_4 + '\t' + stDan_5);
+
+				}
+					}
+			*/
+
+
+			let dan_print = '';
+			let plusDan = 0, dansu;
+			for (let i = 1; i <= 2; i++){
+				// i = 1~2
+				if (i >= 2){
+					plusDan += 4;
+				}
+				for (let a = 1; a <= 9; a++) {
+				// a = 9보다 작음
+					dan_print = '';
+					for (let b = 2; b <= 5; b++) {
+				// b = 2~5
+						dansu = b + plusDan;
+				// dansu = 6,7,8,9
+						dan_print += dansu + 'x' + a + '=' + dansu*a + '\t\t';
+					}
+					console.log(dan_print);
+				}
+				console.log('');
+			}
+
+
+
+
+			/*
+			const go = () => {
+				const col = 6;
+				const section = 4;
+				const dan = 19;
+
+				for (let i = 1; i <= section; i++) {
+					console.log(`============= section ${i} =============`);
+					let 공식 = '';
+
+					for (let a = 1; a <= dan; a++) {
+						const nowMaxDan = i * col > dan
+							? dan
+							: i * col;
+						// console.log(nowDan, dan);
+						let b = i * col - col + 1;
+						// console.log('a', a);
+						for (b; b <= nowMaxDan; b++) {
+							// console.log('b', b);
+							공식 += `${b} * ${a} = ${a * b} \t`;
+							if (b == nowMaxDan) {
+								공식 += '\n';
+							}
+						}
+					}
+					console.log(공식);
+				}
+			};
+			go();
+			*/
+		</script>
+
+		<script>
+
+		</script>
+	</body>
+</html>
