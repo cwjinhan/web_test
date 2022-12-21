@@ -1,299 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  margin: 10px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  display: none; /* Hide all elements by default */
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #ddd;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-</style>
-</head>
-<body>
-
-<!-- MAIN (Center website) -->
-<div class="main">
-
-<h1>MYLOGO.COM</h1>
-<hr>
-
-<h2>PORTFOLIO</h2>
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-  <button class="btn" onclick="filterSelection('people')"> People</button>
-</div>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column nature">
-    <div class="content">
-      <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-      <h4>Mountains</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column nature">
-    <div class="content">
-    <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Lights" style="width:100%">
-      <h4>Lights</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column nature">
-    <div class="content">
-    <img src="https://www.w3schools.com/w3images/nature.jpg" alt="Nature" style="width:100%">
-      <h4>Forest</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-
-  <div class="column cars">
-    <div class="content">
-      <img src="https://www.w3schools.com/w3images/cars1.jpg" alt="Car" style="width:100%">
-      <h4>Retro</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column cars">
-    <div class="content">
-    <img src="https://www.w3schools.com/w3images/cars2.jpg" alt="Car" style="width:100%">
-      <h4>Fast</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column cars">
-    <div class="content">
-    <img src="https://www.w3schools.com/w3images/cars3.jpg" alt="Car" style="width:100%">
-      <h4>Classic</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-
-  <div class="column people">
-    <div class="content">
-      <img src="https://www.w3schools.com/w3images/people1.jpg" alt="Car" style="width:100%">
-      <h4>Girl</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-    <img src="https://www.w3schools.com/w3images/people2.jpg" alt="Car" style="width:100%">
-      <h4>Man</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-    <img src="https://www.w3schools.com/w3images/people3.jpg" alt="Car" style="width:100%">
-      <h4>Woman</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-<!-- END GRID -->
-</div>
-
-<!-- END MAIN -->
-</div>
-
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-
-</body>
-</html>
-
-
-<!--<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-</head>
-<body>
-
-<h2>Center an Image</h2>
-<p>To center an image, set left and right margin to auto, and make it into a block element.</p>
-
-<img src="/images/img_paris.jpg" alt="Paris" style="width:50%;">
-
-</body>
-</html>
--->
-<!--
-<html>
     <head>
-        <title>
-            Random Image Generator
-        </title>
-    </head>
-    <script>
-        function getRandomImage() {
-            //declare an array to store the images
-            var randomImage = new Array();
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="/css/cat.css" rel="stylesheet">
+		<style>
+			img {
+				border-radius: 50%;
+				}
+		</style>
 
-            //insert the URL of images in array
-            randomImage[0] = "https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg?auto=compress" +
-                    "&cs=tinysrgb&dpr=1&w=500";
-            randomImage[1] = "http://www.petsworld.in/blog/wp-content/uploads/2014/09/running-cute-puppies.j" +
-                    "pg";
-            randomImage[2] = "https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg?auto=compress" +
-                    "&cs=tinysrgb&dpr=1&w=500";
-            randomImage[3] = "https://images.unsplash.com/photo-1543877087-ebf71fde2be1?ixlib=rb-1.2.1&ixid=" +
-                    "eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
-            randomImage[4] = "https://wi.wallpapertip.com/wsimgs/156-1565522_puppies-desktop-wallpaper-deskt" +
-                    "op-background-puppies.jpg";
-            randomImage[5] = "https://images.unsplash.com/photo-1501265976582-c1e1b0bbaf63?ixlib=rb-1.2.1&ix" +
-                    "id=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
+		<title></title>
+	</head>
+	<body>
+		<div class="man" id="demo">
+			<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:200px">
+		</div>
+	</body>
+	<script>
+		let l1 = Math.floor(Math.random() * 1920);
+		let t1 = Math.floor(Math.random() * 1280);
 
-            //generate a number and provide to the image to generate randomly
-            var number = Math.floor(Math.random() * randomImage.length);
+		console.log(l1, t1);
 
-            //return the images generated by a random number
-            return document
-                .getElementById("result")
-                .innerHTML = '<img src="' + randomImage[number] + '" />';
-        }
-    </script>
-    <body>
-        <center>
-            <h2 style="color:green">
-                Random Image Generator
-            </h2>
-        </center>
-        <h4>
-            Click the button to generate and display random images on the webpage
-        </h4>
-         call user-defined getRandomImage function after 2 seconds
-        <button onclick="setInterval(getRandomImage, 2000)">
-            Generate Image
-        </button>
-        <br>
-        <br>
-        <span id="result" align="center"></span>
+	//	function getRandomMap(top, left) {
+	//		return Math.floor(Math.random() * 1000);
+	//	}
 
-    </body>
+
+
+	</script>
+
+	<!--<script>
+            function getRandomSize(min, max) {
+                return Math.round(Math.random() * (max - min) + min);
+            }
+
+            var allImages = "";
+
+            for (var i = 0; i < 25; i++) {
+                var width = getRandomSize(200, 400);
+                var height = getRandomSize(200, 400);
+                allImages += '<img src="https://placekitten.com/' + width + '/' + height + '" alt="pretty ki' + 'tty">';
+            }
+
+            $('#photos').append(allImages);
+        </script>-->
+
 </html>
-
-
--->
