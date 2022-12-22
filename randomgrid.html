@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="/css/cat.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<style>
+			div#demo {
+				position: absolute;
+			}
+			img {
+				border-radius: 50%;
+				}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="canvas">
+			<canvas id="demo" tabindex="0" width="721" height="328" style="width: 721px; height: 328px;"></canvas>
+		</div>
+
+		<script>
+			var canvas = document.getElementById('demo');
+			var context = canvas.getContext('2d');
+
+			var colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+
+			var n = Math.floor(11 * Math.random()); // Generate a random integer between 4 and 10
+			var i = Math.floor(colors.length * Math.random()); // Generate a random index to access a random element in the colors array
+
+			context.globalAlpha = 0.4;
+			context.fillStyle = colors[i];
+
+			for (var k = 0; k < n; k += 1) {
+				var x = 200 * Math.random(); // Generate a random number between 0 and 200
+				var y = 200 * Math.random(); // Generate a random number between 0 and 200
+				var w = 40 + 100 * Math.random(); // Generate a random number between 40 and 100
+				var h = 40 + 100 * Math.random(); // Generate a random number between 40 and 100
+
+			context.fillRect(x, y, w, h);
+			}
+
+		</script>
+
+
+</html>

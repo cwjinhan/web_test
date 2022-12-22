@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link href="/css/cat.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 		<style>
+			div#demo {
+				position: absolute;
+				}
 			img {
 				border-radius: 50%;
 				}
@@ -13,13 +17,50 @@
 		<title></title>
 	</head>
 	<body>
-		<div class="man" id="demo">
+		<button onclick="myFunction()">bump</button>
+		<div id="demo" class="man">
 			<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:200px">
 		</div>
+		<div id="demo2" class="man">
+			<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:200px">
+		</div>
+		<div id="demo3" class="man">
+			<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:200px">
+		</div>
+		<div id="demo4" class="man">
+			<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:200px">
+		</div>
+		<script>
+			let l1 = Math.floor(Math.random() * 1920);
+			let t1 = Math.floor(Math.random() * 1280);
+
+			let canvas = document.getElementById('row');
+
+			let images = [];
+
+			for (let k = 0; k < n; k += 1) {
+
+			}
+
+	/*	function myFunction() {
+			document.querySelector("div#demo").style.transform = `translateX(${l1}px)`;
+			document.querySelector("div#demo2").style.transform = `translateY(${t1}px)`;
+			document.querySelector("div#demo3").style.transform = `translateX(${l1}px)`;
+			document.querySelector("div#demo4").style.transform = `translateY(${t1}px)`;
+		}*/
+
+
+	//	let avatar =
+//		const allImage = []
+
+	//	for (var i = 0 ; i < 25; i++) {
+	//		allImage +=
+	//	}
+	</script>
 	</body>
-	<script>
-		let l1 = Math.floor(Math.random() * 1920);
-		let t1 = Math.floor(Math.random() * 1280);
+
+
+	<!--<script>
 
 
 
@@ -28,10 +69,6 @@
 	//	}
 
 
-
-	</script>
-
-	<!--<script>
             function getRandomSize(min, max) {
                 return Math.round(Math.random() * (max - min) + min);
             }
